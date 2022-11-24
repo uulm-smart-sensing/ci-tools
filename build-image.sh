@@ -7,7 +7,7 @@
 IMAGE_NAME="$CI_REGISTRY/se-anwendungsprojekt-22-23/ci-tools/$1"
 
 # build the commit tag image
-docker build --pull --tag $IMAGE_NAME:$CI_COMMIT_SHA --target $@ $1
+docker build --pull --tag $IMAGE_NAME:$CI_COMMIT_SHA $1
 
 # push new image tags
 docker push $IMAGE_NAME:$CI_COMMIT_SHA
