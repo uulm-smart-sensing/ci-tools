@@ -9,3 +9,6 @@ COPY build_files /tmp/build_files
 
 # Run build script
 RUN  /tmp/build_files/build_script.sh && rm -r /tmp/*
+
+# PATH env var ( KEEP THE VERSION IN THE CMDLINE-TOOLS PATH UPDATED \/\/ )
+ENV PATH /flutter/bin:/android/platform-tools:/android/cmdline-tools/7.0/bin:$PATH
