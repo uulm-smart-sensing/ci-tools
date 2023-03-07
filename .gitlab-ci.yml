@@ -23,6 +23,7 @@ build_devtools:
   extends: .docker
   only:
     - merge_requests
+    - tags
   script:
   - ./build-image.sh flutter-devtools
 
